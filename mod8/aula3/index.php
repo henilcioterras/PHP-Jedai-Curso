@@ -3,9 +3,9 @@
 
 	$id=3;
 
-	$sql=$pdo->prepare("UPDATE `clientes` SET nome='Nelicia',sobrenome='Alves' where id=$id "); 
+	$sql=$pdo->prepare("UPDATE `clientes` SET nome=?,sobrenome=? where id=$id "); 
 
-	if ($sql->execute()) {
+	if ($sql->execute(array($nome,$sobrenome))) {
 		echo "sucess";
 	}
  ?>
